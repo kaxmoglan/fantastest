@@ -11,6 +11,6 @@ generator client {
 // Represents a table for storing users
 model User {
   userId   String @id @default(uuid())
-  email    String
+  email    String @unique
   location String
 }
