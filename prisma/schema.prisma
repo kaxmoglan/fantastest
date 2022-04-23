@@ -1,0 +1,16 @@
+// Settings
+datasource ods {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+// Represents a table for storing users
+model User {
+  userId   String @id @default(uuid())
+  email    String
+  location String
+}
